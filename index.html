@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha384-X7L1bhgb36bF1iFvaqvhgpaGpayKM+vXNNYRlF89BFA5s3vi1qZ8EX9086RlZjy1" crossorigin="" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" integrity="sha384-lPzjPsFQL6te2x+VxmV6q1DpRxpRk0tmnl2cpwAO5y04ESyc752tnEWPKDfl1olr" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" integrity="sha384-5kMSQJ6S4Qj5i09mtMNrWpSi8iXw230pKU76xTmrpezGnNJQzj0NzXjQLLg+jE7k" crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.0.2/css/leaflet-sidebar.min.css" integrity="sha384-EPNnjUWfl6+wmqeqVBLV1haeIrms6PXl67DNZ/RVCsfkwT78QX2fe16Gxidc6UOF" crossorigin="" />
@@ -28,6 +29,7 @@
 
             </ul>
             <ul role="tablist">
+                <li><a href="#search" role="tab"><i class="fa fa-plus"></i></a></li>
                 <li><a href="#about" role="tab"><i class="fa fa-question-circle"></i></a></li>
             </ul>
         </div>
@@ -37,7 +39,7 @@
                      Village priorization Tanzania
                     <div class="leaflet-sidebar-close"><i class="fa fa-times"></i></div>
                 </h1>
-                <p>This tool was developed to support private and public actors in Tanzania to quickly and accurately prioritize villages by their potential for off-grid electrification, based on information such as population density, distance to grid, solar resource and others. </p>
+                <p>This is a slight modification of the too that was developed to support private and public actors in Tanzania to quickly and accurately prioritize villages by their potential for off-grid electrification, based on information such as population density, distance to grid, solar resource and others. There is some data added that we found useful, as well as a means to report issues with the map</p>
 				<p>This is intended as a first stop and a companion to the Tanzania <a href="http://www.minigrids.go.tz/" target="_blank">Mini-Grids Information Portal</a>. The menu on the left provides access to further information about the tool, links to data sources and outputs, and filters to refine the results displayed in the tool.</p>
 				<p>In addition to this tool, detailed house-hold level maps are being created of almost every rural village in Tanzania. This data will become visible in this tool as it is created and added to <a href="https://www.openstreetmap.org/search?query=tanzania#map=6/-6.402/34.993" target="_blank">OpenStreetMap</a>.</p>
 				<p>This tool was developed by the International Finance Corporation in cooperation with the Government of Tanzania and the <a href="http://rea.go.tz/" target="_blank">Rural Energy Agency</a>, supported by the <a href="https://reiner-lemoine-institut.de/" target="_blank">Reiner Lemoine Institut</a>, <a href="http://integration.org/" target="_blank">INTEGRATION environment and energy</a>, and the <a href="https://www.hotosm.org/" target="_blank">Humanitarian Openstreetmap Team</a>.</p>
@@ -56,7 +58,7 @@
                 The processing steps for preparing the data for the prioritization are described with details and examples in <a href="methodology_prioritization.html" target="_blank">this section</a>.</p>
 				<p><h3>Methodology for data preparation</h3> 
                 An overview of the web-map development is provided <a href="methodology_webmap.html" target="_blank">here</a>.</p>
-                
+                <p>The mining data was pulled from <a href="http://www.nbs.go.tz/nbstz/index.php/english/geographical-information-systeml-gis">this link</a></p>
 
             </div>
             <div class="leaflet-sidebar-pane" id="settings">
@@ -96,6 +98,13 @@
 				<p>To download the OpenStreetMap data to use in software such as <a href="https://www.qgis.org" target="_blank">QGIS</a>, please use the <a href="https://export.hotosm.org/en/v3/" target="_blank">HOT Export Tool</a> where you can select the area of interest and the required data for download.</p>
                 <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
             </div>
+    <div class="leaflet-sidebar-pane" id="search">
+                <h1 class="leaflet-sidebar-header">
+                     Add Villages
+                    <div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
+                </h1>
+               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYDDG6ATNWoq_7vhJm1JzSOWxPx2TH7ib3qpWh9rvO5ZxFdw/viewform?embedded=true" width="390" height="640" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
         </div>
     </div>
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -103,6 +112,7 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster-src.js" integrity="sha384-NAOEbWFcjnXc7U9GkULPhupHZNAbqru9dS3c+4ANYAwtFoVAWuVuMVDH0DIy4ESp" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js" integrity="sha384-FON5fTjCTtPuBgUS1r2H/PGXstH0Rk23YKjZmB6qITkbFqBcqtey/rPo9eXwOWpx" crossorigin=""></script>
     <script src="data/points.js"></script>
+    <script src="data/mines.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2@3.0.2/js/leaflet-sidebar.min.js" integrity="sha384-LzTQ6yhqVy/ipjMq5MMk98mo0E64Wtu9K1Jm5OeKPolnqrlv3FMdc457RoOANGMb" crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.min.js" integrity="sha384-9NhfMwMkkA6dDFEyj5CxOiYaL6KqLjKINTJkR7e5SlZthrndR9oB/SJsi5PBNnjw" crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.0.3/nouislider.min.js" integrity="sha384-sxnhs+25aQQN+rABTQEEYOIX5CW20SBJyXt9oGMT5VDacFTTWGXKotTEAe8BUiwb" crossorigin=""></script>
@@ -168,9 +178,9 @@
                 vectorTileLayerStyles: {
                     cluster: function(prop, zoom) {
                         if (prop.Access == "no") {
-                            color = "lightgray";
-                        } else {
                             color = "red";
+                        } else {
+                            color = "lightgray";
                         }
                         return {
                             fill: true,
@@ -271,6 +281,14 @@
                     L.DomEvent.stop(e);
                 }
             });
+        map.on('click', function(e) {        
+        let popLocation= e.latlng;
+        let popup = L.popup()
+        .setLatLng(popLocation)
+        .setContent('<p>'+popLocation.lat.toFixed(5)+','+popLocation.lng.toFixed(5)+'</p>')
+        .openOn(map);        
+    });
+
         vecTileLayer.highlight = null;
         vecTileLayer.hidden = null;
         vecTileLayer.hiddenstyle = {
@@ -331,8 +349,9 @@
                       <tr><td align="center" colspan="2"><b><u>Priority Cluster</u></b></td></tr>\
                       <tr><td align="right"><b>Region</b>:</td><td>'+info.R+'</td></tr>\
                       <tr><td align="right"><b>District</b>:</td><td>'+info.D+'</td></tr>\
-                      <tr><td align="right"><b>Village</b>:</td><td>'+info.V+'</td></tr>\
                       <tr><td align="right"><b>Ward</b>:</td><td>'+info.W+'</td></tr>\
+                      <tr><td align="right"><b>Village</b>:</td><td>'+info.V+'</td></tr>\
+                      <tr><td align="right"><b>GPS</b>:</td><td>'+point[LAT]+','+point[LONG]+'</td></tr>\
                       <tr><td align="right"><b>Grid Access</b>:</td><td>no</td></tr>\
                       <tr><td align="right"><b>Dist. to Grid</b>:</td><td>'+info.DIST+' km</td></tr>\
                       <tr><td align="right"><b>Population</b>:</td><td>'+info.POP+'</td></tr>\
@@ -349,7 +368,44 @@
             this.addLayers(markerList);
             map.addLayer(this);
         };
+        
+        let tz_mining = L.layerGroup().addTo(map);
 
+        for (let j = 0; j < mine_pts.length; j++) {
+          let m_point = mine_pts[j];
+          let m_info = m_point[2]
+          let m_title = '\
+          <table>\
+            <tr><td align="center" colspan="2"><b><u>Mines</u></b></td></tr>\
+            <tr><td align="right"><b>Region</b>:</td><td>'+m_info.region+'</td></tr>\
+            <tr><td align="right"><b>Name</b>:</td><td>'+m_info.name+'</td></tr>\
+            <tr><td align="right"><b>GPS</b>:</td><td>'+m_point[1]+','+m_point[0]+'</td></tr>\
+            <tr><td align="right"><b>Commodity</b>:</td><td>'+m_info.commodity+'</td></tr>\
+            <tr><td align="right"><b>Status</b>:</td><td>'+m_info.miningexpl+'</td></tr>\
+            <tr><td align="right"><b>Economic Viability</b>:</td><td>'+m_info.econstatus+'</td></tr>\
+            <tr><td align="right"><b>Feasibility</b>:</td><td>'+m_info.feasibilit+'</td></tr>\
+          </table>';
+          let m_params = {"bubblingMouseEvents": true,
+          "color": "green",
+          "dashArray": null,
+          "dashOffset": null,
+          "fill": true,
+          "fillColor": "green",
+          "fillOpacity": 0.2,
+          "fillRule": "evenodd",
+          "lineCap": "round",
+          "lineJoin": "round",
+          "opacity": 1.0,
+          "radius": 5,
+          "stroke": true,
+          "weight": 1
+        };
+          let m_circle = L.circleMarker([m_point[1], m_point[0]], m_params);
+          m_circle.bindPopup(m_title);
+          tz_mining.addLayer(m_circle);
+
+      };
+        
         vecTileLayer.filter = function(filter) {
             let newhiddenIDs = [];
             let vt = this._vectorTiles;
@@ -447,8 +503,16 @@
             position: "left"
         }).addTo(map);
 
+        let gsm2g = L.tileLayer("https://www.mobilecoveragemaps.com/static/raster/2G_coverage/{z}/{x}/{-y}.png", {attribution: '&copy; <a href="https://www.mobilecoveragemaps.com/map_tz/">Mobile Coverage Maps</a>'});
+        let gsm3g = L.tileLayer("https://www.mobilecoveragemaps.com/static/raster/3G_coverage/{z}/{x}/{-y}.png", {attribution: '&copy; <a href="https://www.mobilecoveragemaps.com/map_tz/">Mobile Coverage Maps</a>'});
+        let gsm4g = L.tileLayer("https://www.mobilecoveragemaps.com/static/raster/4G_coverage/{z}/{x}/{-y}.png", {attribution: '&copy; <a href="https://www.mobilecoveragemaps.com/map_tz/">Mobile Coverage Maps</a>'});
+        
         let overlayMaps = {
-            "Priority Clusters": markers
+            "Priority Clusters": markers,
+            "Mine Locations" : tz_mining,
+            "Network:2G": gsm2g,
+            "Network:3G": gsm3g,
+            "Network:4G": gsm4g
         };
         L.control.layers(baseMaps, overlayMaps).addTo(map);
         map.on("layeradd",function (){vecTileLayer.bringToFront();});
